@@ -20,7 +20,27 @@ const SimpleSlider: React.FC = () => {
 
   return (
     <section className="py-20 bg-zinc-50 dark:bg-zinc-900/50">
-      <div className="max-w-screen-xl mx-auto px-6">
+      <div className="max-w-[1200px] mx-auto px-4">
+        {/* Unified Headers */}
+        <div className="text-center mb-16">
+          <motion.span 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="inline-block text-orange-500 font-bold tracking-[0.3em] text-[10px] md:text-xs uppercase mb-4 border-b-2 border-orange-500/30 pb-1"
+          >
+            ROOMBEE STELLT SICH VOR
+          </motion.span>
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-3xl md:text-6xl font-black tracking-tighter leading-[1.1] text-zinc-900 dark:text-white"
+          >
+            Professionelle Gebäudereinigung für <br className="hidden md:block" />
+            <span className="text-orange-500">Privat- und Gewerbekunden.</span>
+          </motion.h1>
+        </div>
+
         <div className="flex flex-col items-center">
           <div className="w-full max-w-[768px] overflow-hidden relative rounded-[2.5rem] shadow-2xl border border-zinc-200/50 dark:border-zinc-800/50 aspect-[768/329]">
             <motion.div 
