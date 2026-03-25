@@ -224,9 +224,9 @@ const ServiceTabs: React.FC = () => {
 
   return (
     <div className="w-full max-w-screen-xl mx-auto px-4 md:px-8 py-12">
-      <div className="bg-white dark:bg-zinc-900 rounded-[3rem] shadow-2xl border border-zinc-200/50 dark:border-zinc-800/50 overflow-hidden">
+      <div className="bg-white rounded-[3rem] shadow-2xl border border-zinc-200/50 overflow-hidden">
         {/* Tabs Desktop */}
-        <div className="hidden md:flex border-b border-zinc-200/50 dark:border-zinc-800/50 bg-zinc-50/50 dark:bg-zinc-900/50">
+        <div className="hidden md:flex border-b border-zinc-200/50 bg-zinc-50/50">
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -234,8 +234,8 @@ const ServiceTabs: React.FC = () => {
                 setActiveTab(tab.id);
                 setExpandedItem(null);
               }}
-              className={`flex-1 flex items-center justify-center gap-3 py-8 px-4 text-[11px] font-bold tracking-widest transition-all relative border-r last:border-r-0 border-zinc-200/50 dark:border-zinc-800/50
-                ${activeTab === tab.id ? 'text-orange-500 bg-white dark:bg-zinc-900' : 'text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200'}
+              className={`flex-1 flex items-center justify-center gap-3 py-8 px-4 text-[11px] font-bold tracking-widest transition-all relative border-r last:border-r-0 border-zinc-200/50
+                ${activeTab === tab.id ? 'text-orange-500 bg-white' : 'text-zinc-400 hover:text-zinc-600'}
               `}
             >
               <span className="material-symbols-outlined text-xl">{tab.icon}</span>
@@ -251,7 +251,7 @@ const ServiceTabs: React.FC = () => {
         </div>
 
         {/* Mobile Tabs */}
-        <div className="md:hidden flex overflow-x-auto border-b border-zinc-100 dark:border-zinc-800">
+        <div className="md:hidden flex overflow-x-auto border-b border-zinc-100">
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -286,12 +286,12 @@ const ServiceTabs: React.FC = () => {
                   {activeContent?.items.map((item, i) => (
                     <div 
                       key={i}
-                      className="group flex flex-col p-4 md:p-6 rounded-3xl bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200/50 dark:border-zinc-800/50 hover:border-orange-500/30 transition-all cursor-pointer shadow-sm hover:shadow-xl hover:shadow-orange-500/[0.05]"
+                      className="group flex flex-col p-4 md:p-6 rounded-3xl bg-zinc-50 border border-zinc-200/50 hover:border-orange-500/30 transition-all cursor-pointer shadow-sm hover:shadow-xl hover:shadow-orange-500/[0.05]"
                       onClick={() => setExpandedItem(expandedItem === `${activeTab}-${i}` ? null : `${activeTab}-${i}`)}
                     >
                       <div className="flex items-center justify-between">
                         <h4 className={`font-bold transition-colors uppercase tracking-tight text-sm 
-                          ${expandedItem === `${activeTab}-${i}` ? 'text-orange-500' : 'text-zinc-900 dark:text-zinc-100 group-hover:text-orange-500'}
+                          ${expandedItem === `${activeTab}-${i}` ? 'text-orange-500' : 'text-zinc-900 group-hover:text-orange-500'}
                         `}>
                           {item.title}
                         </h4>
@@ -309,21 +309,21 @@ const ServiceTabs: React.FC = () => {
                             initial={{ height: 0, opacity: 0, marginTop: 0 }}
                             animate={{ height: 'auto', opacity: 1, marginTop: 24 }}
                             exit={{ height: 0, opacity: 0, marginTop: 0 }}
-                            className="overflow-hidden border-t border-zinc-200/50 dark:border-zinc-700/50 pt-6"
+                            className="overflow-hidden border-t border-zinc-200/50 pt-6"
                           >
                             <div className="flex flex-col gap-6">
                               {item.image && (
                                 <motion.div 
                                   initial={{ scale: 0.95, opacity: 0 }}
                                   animate={{ scale: 1, opacity: 1 }}
-                                  className="w-full h-48 md:h-64 rounded-2xl overflow-hidden shadow-inner bg-zinc-200 dark:bg-zinc-700"
+                                  className="w-full h-48 md:h-64 rounded-2xl overflow-hidden shadow-inner bg-zinc-200"
                                 >
                                   <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
                                 </motion.div>
                               )}
                               
                               <div className="flex flex-col gap-6">
-                                <p className="text-zinc-600 dark:text-zinc-400 text-base font-light leading-relaxed">
+                                <p className="text-zinc-600 text-base font-light leading-relaxed">
                                   {item.fullDesc || item.desc}
                                 </p>
                                 
@@ -352,7 +352,7 @@ const ServiceTabs: React.FC = () => {
           </AnimatePresence>
 
           {/* Bottom Buttons */}
-          <div className="mt-16 flex flex-wrap gap-4 justify-center md:justify-end border-t border-zinc-100 dark:border-zinc-800 pt-8">
+          <div className="mt-16 flex flex-wrap gap-4 justify-center md:justify-end border-t border-zinc-100 pt-8">
             <button className="flex items-center gap-3 px-8 py-3.5 bg-orange-500 text-white rounded-2xl font-bold text-xs tracking-widest uppercase hover:bg-orange-600 transition-all shadow-lg shadow-orange-500/20">
               <span className="material-symbols-outlined text-sm">redeem</span>
               Aktionen entdecken

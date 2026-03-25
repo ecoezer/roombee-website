@@ -40,13 +40,13 @@ const Services: React.FC = () => {
       title: "Download-Center",
       desc: "Alle wichtigen Formulare, Flyer ve Informationen an einem Ort.",
       icon: "download",
-      color: "bg-zinc-100 dark:bg-zinc-800",
+      color: "bg-zinc-100",
       cta: "Zu den Downloads"
     }
   ];
 
   return (
-    <div className="bg-white dark:bg-zinc-950 min-h-screen">
+    <div className="bg-white min-h-screen">
       {/* Hero Section */}
       <section className="relative pt-32 pb-8 px-8 overflow-hidden border-b border-zinc-200/50">
         <div className="max-w-screen-xl mx-auto z-10 relative">
@@ -81,7 +81,7 @@ const Services: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group bg-zinc-50 dark:bg-zinc-900/50 rounded-[2.5rem] p-10 border border-zinc-200/60 dark:border-zinc-800/60 hover:border-orange-500/20 hover:shadow-2xl hover:shadow-orange-500/[0.05] transition-all duration-500 relative overflow-hidden"
+              className="group bg-zinc-50 rounded-[2.5rem] p-10 border border-zinc-200/60 hover:border-orange-500/20 hover:shadow-2xl hover:shadow-orange-500/[0.05] transition-all duration-500 relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <div className="relative z-10">
@@ -89,7 +89,7 @@ const Services: React.FC = () => {
                 <h3 className="font-headline text-2xl font-bold mb-8 tracking-tight group-hover:text-orange-500 transition-colors">{cat.title}</h3>
                 <ul className="space-y-4">
                   {cat.services.map((service, si) => (
-                    <li key={si} className="flex items-center gap-3 text-zinc-500 dark:text-zinc-400 font-medium text-sm">
+                    <li key={si} className="flex items-center gap-3 text-zinc-500 font-medium text-sm">
                       <span className="w-1.5 h-1.5 rounded-full bg-orange-500/40"></span>
                       {service}
                     </li>
@@ -170,13 +170,13 @@ const Services: React.FC = () => {
 const catColor = (color: string) => {
   if (color === 'bg-orange-500') return 'text-white border-0';
   if (color === 'bg-zinc-900') return 'text-zinc-50 border-0';
-  return 'text-zinc-900 dark:text-white border border-zinc-200/60 dark:border-zinc-800/60';
+  return 'text-zinc-900 border border-zinc-200/60';
 };
 
 const catTextColor = (color: string) => {
   if (color === 'bg-orange-500') return 'text-white/80';
   if (color === 'bg-zinc-900') return 'text-zinc-400';
-  return 'text-zinc-500 dark:text-zinc-400';
+  return 'text-zinc-500';
 };
 
 const catIconColor = (color: string) => {
@@ -193,7 +193,7 @@ const catBadgeColor = (color: string) => {
 const catBtnColor = (color: string) => {
   if (color === 'bg-orange-500') return 'bg-white text-orange-500 hover:bg-zinc-100';
   if (color === 'bg-zinc-900') return 'bg-orange-500 text-white hover:bg-orange-600';
-  return 'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900 hover:opacity-90';
+  return 'bg-zinc-900 text-white hover:opacity-90';
 };
 
 export default Services;

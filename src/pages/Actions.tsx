@@ -16,7 +16,7 @@ const Actions: React.FC = () => {
   ];
 
   return (
-    <div className="bg-white dark:bg-zinc-950 min-h-screen">
+    <div className="bg-white min-h-screen">
       {/* Hero Header */}
       <section className="relative pt-32 pb-8 px-8 overflow-hidden border-b border-zinc-200/50">
         <div className="max-w-screen-xl mx-auto z-10 relative">
@@ -101,7 +101,7 @@ const Actions: React.FC = () => {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
-              className="bg-zinc-50 dark:bg-zinc-900 p-10 rounded-[2.5rem] border border-zinc-200 dark:border-zinc-800 hover:border-orange-500/20 hover:shadow-2xl hover:shadow-orange-500/[0.05] transition-all duration-500 group relative overflow-hidden"
+              className="bg-zinc-50 p-10 rounded-[2.5rem] border border-zinc-200 hover:border-orange-500/20 hover:shadow-2xl hover:shadow-orange-500/[0.05] transition-all duration-500 group relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-orange-500/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <h4 className="font-headline text-lg font-bold mb-6 tracking-tight uppercase text-zinc-400 relative z-10">Ihre Vorteile</h4>
@@ -109,7 +109,7 @@ const Actions: React.FC = () => {
                 {mainPerks.map((perk, i) => (
                   <div key={i} className="flex items-center gap-4">
                     <span className="text-orange-500 material-symbols-outlined text-xl">{perk.icon}</span>
-                    <span className="text-sm font-bold text-zinc-600 dark:text-zinc-300">{perk.title}</span>
+                    <span className="text-sm font-bold text-zinc-600">{perk.title}</span>
                   </div>
                 ))}
               </div>
@@ -122,7 +122,7 @@ const Actions: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12 py-12 px-10 bg-zinc-50 dark:bg-zinc-900/40 rounded-[3rem] border border-zinc-200/60 dark:border-zinc-800/60 hover:border-orange-500/20 hover:shadow-2xl hover:shadow-orange-500/[0.05] transition-all duration-500 group relative overflow-hidden"
+          className="mb-12 py-12 px-10 bg-zinc-50/40 rounded-[3rem] border border-zinc-200/60 hover:border-orange-500/20 hover:shadow-2xl hover:shadow-orange-500/[0.05] transition-all duration-500 group relative overflow-hidden"
         >
           <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           <div className="max-w-4xl mx-auto relative z-10">
@@ -131,17 +131,17 @@ const Actions: React.FC = () => {
               Ganz einfach... WIR TUN ES EINFACH & ZEIGEN ES IHNEN IN DER PRAXIS!
             </p>
             
-            <div className="prose prose-zinc dark:prose-invert max-w-none text-zinc-500 dark:text-zinc-400 text-base leading-relaxed font-light space-y-4">
+            <div className="prose prose-zinc max-w-none text-zinc-500 text-base leading-relaxed font-light space-y-4">
               <p>
                 Wenn Sie noch kein Kunde sind, haben Sie jetzt die Möglichkeit, unsere Leistungen kostenlos und unverbindlich kennenzulernen.
               </p>
               
               <div className="grid md:grid-cols-3 gap-4 my-8 not-prose">
                 {processPerks.map((perk, i) => (
-                  <div key={i} className="flex items-center gap-3 bg-white dark:bg-zinc-800 p-4 rounded-xl border border-zinc-200/50 shadow-sm hover:border-orange-500/30 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 group/perk relative overflow-hidden">
+                  <div key={i} className="flex items-center gap-3 bg-white p-4 rounded-xl border border-zinc-200/50 shadow-sm hover:border-orange-500/30 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 group/perk relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/[0.03] to-transparent opacity-0 group-hover/perk:opacity-100 transition-opacity"></div>
                     <span className="material-symbols-outlined text-orange-500 text-[20px] relative z-10">check_circle</span>
-                    <span className="text-sm font-bold text-zinc-700 dark:text-zinc-200 relative z-10">{perk}</span>
+                    <span className="text-sm font-bold text-zinc-700 relative z-10">{perk}</span>
                   </div>
                 ))}
               </div>
@@ -150,7 +150,7 @@ const Actions: React.FC = () => {
                 Sie entscheiden im Anschluss selbst, ob Sie unsere Leistungen künftig in Anspruch nehmen möchten.
               </p>
 
-              <p className="pt-4 border-t border-zinc-200 dark:border-zinc-800">
+              <p className="pt-4 border-t border-zinc-200">
                 <strong>Unsere Erfahrung zeigt:</strong> Wer unsere Arbeit einmal live erlebt hat, entscheidet sich häufig für eine Zusammenarbeit. Nicht wegen kurzfristiger Vorteile, sondern wegen Qualität, Zuverlässigkeit ve flexibler Terminplanung.
               </p>
 

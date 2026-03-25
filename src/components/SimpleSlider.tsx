@@ -19,7 +19,7 @@ const SimpleSlider: React.FC = () => {
   }, []);
 
   return (
-    <section className="pt-12 pb-8 bg-zinc-50 dark:bg-zinc-900/50">
+    <section className="pt-12 pb-8 bg-zinc-50">
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Unified Headers */}
         <div className="text-center mb-10">
@@ -34,7 +34,7 @@ const SimpleSlider: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-3xl md:text-6xl font-black tracking-tighter leading-[1.1] text-zinc-900 dark:text-white"
+            className="text-3xl md:text-6xl font-black tracking-tighter leading-[1.1] text-zinc-900"
           >
             Professionelle Gebäudereinigung für <br className="hidden md:block" />
             <span className="text-orange-500">Privat- und Gewerbekunden.</span>
@@ -42,7 +42,7 @@ const SimpleSlider: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="w-full max-w-[768px] overflow-hidden relative rounded-[2.5rem] shadow-2xl border border-zinc-200/50 dark:border-zinc-800/50 aspect-[768/329]">
+          <div className="w-full max-w-[768px] overflow-hidden relative rounded-[2.5rem] shadow-2xl border border-zinc-200/50 aspect-[768/329]">
             <motion.div 
               className="flex h-full"
               animate={{ x: `-${currentIndex * 100}%` }}
@@ -71,7 +71,7 @@ const SimpleSlider: React.FC = () => {
                 className={`transition-all duration-300 rounded-full ${
                   index === currentIndex 
                     ? 'w-8 h-3 bg-orange-500' 
-                    : 'w-3 h-3 bg-zinc-300 dark:bg-zinc-700 hover:bg-zinc-400'
+                    : 'w-3 h-3 bg-zinc-300 hover:bg-zinc-400'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />

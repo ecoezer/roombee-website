@@ -17,7 +17,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-12 px-8 bg-zinc-50 dark:bg-zinc-900/50">
+      <section className="py-12 px-8 bg-zinc-50">
         <div className="max-w-screen-xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -56,7 +56,7 @@ const About: React.FC = () => {
                   className="w-full h-full object-cover rounded-[2.8rem]"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-white dark:bg-zinc-800 p-6 rounded-2xl shadow-xl border border-zinc-200/50 dark:border-zinc-700/50 max-w-[200px]">
+              <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-zinc-200/50 max-w-[200px]">
                 <div className="text-primary font-bold text-3xl mb-1">100%</div>
                 <div className="text-xs font-semibold text-zinc-500 uppercase tracking-widest">Qualitätsgarantie</div>
               </div>
@@ -80,11 +80,11 @@ const About: React.FC = () => {
             { step: "05", title: "Fachgerechte Umsetzung", desc: "Durchführung durch unsere spezialisierten Expertenteams." },
             { step: "06", title: "Kontrolle und Übergabe", desc: "Gemeinsame Abnahme für kompromisslose Qualitätssicherung." }
           ].map((item, i) => (
-            <div key={i} className="p-8 rounded-[2.5rem] bg-zinc-50 dark:bg-zinc-900/40 border border-zinc-200/60 dark:border-zinc-800/60 hover:border-orange-500/30 transition-all duration-300 group relative overflow-hidden hover:shadow-2xl hover:shadow-orange-500/5">
+            <div key={i} className="p-8 rounded-[2.5rem] bg-zinc-50 border border-zinc-200/60 hover:border-orange-500/30 transition-all duration-300 group relative overflow-hidden hover:shadow-2xl hover:shadow-orange-500/5">
               <div className="absolute top-0 left-0 w-1 h-full bg-orange-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <div className="text-5xl font-headline font-black text-zinc-200/50 dark:text-zinc-800/50 group-hover:text-orange-500/10 transition-colors mb-4">{item.step}</div>
+              <div className="text-5xl font-headline font-black text-zinc-200/50 group-hover:text-orange-500/10 transition-colors mb-4">{item.step}</div>
               <h4 className="text-xl font-bold mb-3 group-hover:text-orange-500 transition-colors">{item.title}</h4>
-              <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed font-medium">{item.desc}</p>
+              <p className="text-sm text-zinc-500 leading-relaxed font-medium">{item.desc}</p>
             </div>
           ))}
         </div>

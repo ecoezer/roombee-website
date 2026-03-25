@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-[100] bg-white/90 dark:bg-zinc-950/90 backdrop-blur-2xl border-b border-zinc-200/50 dark:border-zinc-800/50 shadow-sm transition-all duration-300">
+    <nav className="fixed top-0 w-full z-[100] bg-white/90 backdrop-blur-2xl border-b border-zinc-200/50 shadow-sm transition-all duration-300">
       <div className="flex justify-between items-center px-8 py-0 max-w-screen-2xl mx-auto">
         <Link to="/" className="flex items-center group">
           <motion.img 
@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
               to={item.path}
               className="relative px-4 py-8 text-[11px] font-bold tracking-widest transition-colors duration-300"
             >
-              <span className={`relative z-10 ${location.pathname === item.path ? 'text-orange-500' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100'}`}>
+              <span className={`relative z-10 ${location.pathname === item.path ? 'text-orange-500' : 'text-zinc-500 hover:text-zinc-900'}`}>
                 {item.name}
               </span>
               {location.pathname === item.path && (
@@ -78,14 +78,14 @@ const Navbar: React.FC = () => {
             </button>
             
             <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out z-50">
-              <div className="bg-white/95 dark:bg-zinc-900/95 backdrop-blur-3xl p-8 rounded-[2rem] shadow-3xl border border-zinc-200/50 dark:border-zinc-800/50 w-[600px] origin-top scale-95 group-hover:scale-100 transition-transform">
+              <div className="bg-white/95 backdrop-blur-3xl p-8 rounded-[2rem] shadow-3xl border border-zinc-200/50 w-[600px] origin-top scale-95 group-hover:scale-100 transition-transform">
                 <div className="grid grid-cols-2 gap-x-12 gap-y-4 text-left">
                   {services.map((service, index) => (
                     <motion.a 
                       key={index} 
                       href="#" 
                       whileHover={{ x: 5, color: '#f97316' }}
-                      className="text-[13px] text-zinc-600 dark:text-zinc-400 font-semibold leading-tight block py-1 border-b border-transparent"
+                      className="text-[13px] text-zinc-600 font-semibold leading-tight block py-1 border-b border-transparent"
                     >
                       {service}
                     </motion.a>
@@ -116,7 +116,7 @@ const Navbar: React.FC = () => {
           </motion.button>
 
           {/* Mobile Menu Icon */}
-          <button className="md:hidden text-zinc-900 dark:text-white p-2">
+          <button className="md:hidden text-zinc-900 p-2">
             <span className="material-symbols-outlined">menu</span>
           </button>
         </div>

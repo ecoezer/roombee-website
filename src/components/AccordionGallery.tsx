@@ -40,7 +40,7 @@ const AccordionGallery: React.FC = () => {
   const [expandedIndex, setExpandedIndex] = useState<number>(0);
 
   return (
-    <section className="bg-white dark:bg-zinc-900 pb-20">
+    <section className="bg-white pb-20">
       <div className="max-w-[1200px] mx-auto px-4">
         <div className="flex flex-col lg:flex-row gap-4 h-[400px] md:h-[450px] w-full">
           {galleryItems.map((item, index) => (
@@ -51,7 +51,7 @@ const AccordionGallery: React.FC = () => {
               animate={{
                 flex: expandedIndex === index ? 4 : 1,
               }}
-              className="relative overflow-hidden rounded-[2.5rem] cursor-pointer group shadow-2xl border border-zinc-200/50 dark:border-zinc-800/50"
+              className="relative overflow-hidden rounded-[2.5rem] cursor-pointer group shadow-2xl border border-zinc-200/50"
               transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
             >
               {/* Background Image */}
@@ -84,7 +84,7 @@ const AccordionGallery: React.FC = () => {
                       <div className="absolute -top-20 -left-20 w-40 h-40 bg-orange-500/10 blur-[80px] rounded-full pointer-events-none" />
                       
                       <div className="mb-6">
-                        <span className="bg-white/90 dark:bg-zinc-900/90 text-zinc-900 dark:text-white px-5 py-2.5 rounded-xl font-black tracking-[0.3em] text-[10px] uppercase shadow-lg border border-white/20">
+                        <span className="bg-white/90 text-zinc-900 px-5 py-2.5 rounded-xl font-black tracking-[0.3em] text-[10px] uppercase shadow-lg border border-white/20">
                           {item.category}
                         </span>
                       </div>

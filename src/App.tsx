@@ -9,7 +9,7 @@ import Services from './pages/Services';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-white dark:bg-zinc-950 font-sans text-zinc-900 dark:text-zinc-100">
+      <div className="min-h-screen bg-white font-sans text-zinc-900">
         <Navbar />
         <main>
           <Routes>
