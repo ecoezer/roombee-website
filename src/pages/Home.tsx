@@ -1,6 +1,6 @@
 import Hero from '../components/Hero';
 import Services from '../components/Services';
-import Equipment from '../components/Equipment';
+import AccordionGallery from '../components/AccordionGallery';
 import CTA from '../components/CTA';
 
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <Hero />
       <Services />
-      <Equipment />
+      <AccordionGallery />
       <CTA />
     </>
   );
