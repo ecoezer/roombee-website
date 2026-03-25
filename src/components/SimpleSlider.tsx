@@ -19,10 +19,10 @@ const SimpleSlider: React.FC = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-zinc-50 dark:bg-zinc-900/50">
+    <section className="pt-12 pb-8 bg-zinc-50 dark:bg-zinc-900/50">
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Unified Headers */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <motion.span 
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
